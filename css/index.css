@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html,body {
+    height: 100%;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+.game {
+    width: 800px;
+    height: 500px;
+    margin: 100px auto;
+}
+.game-canvas-wrap {
+    position: relative;
+}
+.game-pause-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-family: fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    animation: pauseTip 3s infinite;
+    background:linear-gradient(#fff1eb90,#ace0f9);
+}
+.game-pause-ing::after {
+    display: block;
+    content: '游戏暂停啦中.';
+    animation: pauseTip 3s infinite;
+}
+.game-pause-show {
+    display: flex;
+}
+.game-pause-hidden {
+    display: none;
+}
+@keyframes pauseTip {
+    0% {
+        content: '游戏暂停啦中.';
+    }
+    33% {
+        content: '游戏暂停啦中..';
+    }
+    66% {
+        content: '游戏暂停啦中...';
+    }
+}
